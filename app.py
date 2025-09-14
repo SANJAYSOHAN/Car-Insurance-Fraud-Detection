@@ -4,6 +4,7 @@ from PIL import Image
 import numpy as np
 
 # --- Configuration ---
+st.set_page_config(page_title="Fraud Detection", layout="wide")
 MODEL_PATH = 'saved_model/fraud_detector.h5'
 IMG_SIZE = 224
 # These names must match the folder names in your training data, in alphabetical order.
@@ -47,7 +48,7 @@ def predict(image_data, model):
     return prediction_score
 
 # --- Streamlit App UI ---
-st.set_page_config(page_title="Fraud Detection", layout="wide")
+
 st.title("🚗 Auto Insurance Fraud Detection")
 st.write("Upload an image of vehicle damage to check for potential fraudulent claims.")
 
